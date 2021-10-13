@@ -73,6 +73,7 @@ class WidgetRestControllerTest {
                 .andExpect(status().isNotFound());
     }
 
+
     @Test
     @DisplayName("POST /rest/widget")
     void testCreateWidget() throws Exception {
@@ -112,6 +113,7 @@ class WidgetRestControllerTest {
                 .contentType(MediaType.APPLICATION_JSON_VALUE).content(asJsonString(widgetToUpdate)).header(HttpHeaders.IF_MATCH,"1")).andExpect(status().isOk());
         //Assert.assertNotNull(respone);
     }
+
 
     @Test
     @DisplayName("GET/rest/widget/1")
